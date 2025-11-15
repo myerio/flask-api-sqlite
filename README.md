@@ -1,1 +1,1 @@
-- Run init_db.py to generate users.db before starting the API
+
