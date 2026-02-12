@@ -3,6 +3,13 @@ import sqlite3
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return {
+        "message": "Welcome to the SQLite Flask API. Use the /users?year=YOUR_YEAR endpoint to get results."
+    }
+
+
 @app.route("/users", methods=["GET"])
 def get_users():
     year = request.args.get("year", type=int)
